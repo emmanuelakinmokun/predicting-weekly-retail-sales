@@ -11,5 +11,7 @@ df = df.sort_values(by ='Date', ascending=True).reset_index(drop=True)
 
 # Convert column names to lowercase
 df.columns = df.columns.str.lower()
-print(df.columns.tolist())
 
+# Check for duplicated rows
+duplicates = df[df.duplicated(keep=False)]
+print(duplicates)
