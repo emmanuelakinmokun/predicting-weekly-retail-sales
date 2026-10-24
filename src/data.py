@@ -77,4 +77,8 @@ dq_df =pd.DataFrame(dq_metrics)
 # Save to reports
 output_path = 'reports/data_quality_report.csv'
 dq_df.to_csv(output_path, index=False)
- 
+
+ # Split dataset for training
+def time_split(df, test_frac=0.2):
+    cut = int(len(df) * (1 - test_frac))
+    return df.iloc[:cut].copy(), df.iloc[cut:].copy()
