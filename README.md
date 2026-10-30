@@ -39,7 +39,7 @@ Accurate retail sales forecasting is critical for inventory management, staffing
 
 ### Tech Stack & Libraries
 
-- Python
+- Python `Python 3.14.4`
 
 - Pandas & NumPy (Data manipulation and transformation)
 
